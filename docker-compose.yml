@@ -1,0 +1,42 @@
+version: '3.8'
+services:
+  frontend:
+    image: flight-frontend
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      - BACKEND_URL
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    env_file:
+      - ./frontend/.env
+      
+  backend:
+    image: flight-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      MONGODB_CONNECTION_STRING: "mongodb://mongodb:27017/"
+    ports:
+      - "3005:3005"
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - mongodb
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+  mongodb:
+    image: mongo:4.4
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db
