@@ -24,6 +24,7 @@ Projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
  	```bash
      frontend (.env):
      BACKEND_URL=http://localhost:3005
+  
      backend (.env)
      MONGODB_CONNECTION_STRING=mongodb://mongodb:27017/ (lokal mongodb bağlantısı için bu url)
      SCHIPHOL_APP_ID=id keyiniz
