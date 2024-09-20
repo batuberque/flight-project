@@ -20,6 +20,8 @@ Projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
    cd flight-project
    
 2. Orrtam dosyalarınızı oluşturun:
+	
+ 	```bash
      frontend (.env):
      BACKEND_URL=http://localhost:3005
      backend (.env)
