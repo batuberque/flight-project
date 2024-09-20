@@ -58,3 +58,5 @@ Servisler
 	•	mongodb:
 	•	mongo:4.4 imajını kullanarak MongoDB veritabanını çalıştırır.
 	•	27017 portunu kullanarak dış dünyaya açılır.
+
+ Ekran görüntüleri screenshot klasöründedir.
